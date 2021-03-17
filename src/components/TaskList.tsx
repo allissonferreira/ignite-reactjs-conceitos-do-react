@@ -26,6 +26,10 @@ export function TaskList() {
     // Remova uma task da listagem pelo ID
   }
 
+  function generateNewId() {
+    return new Date().getTime();
+  }
+
   return (
     <section className="task-list container">
       <header>
