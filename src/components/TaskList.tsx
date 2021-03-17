@@ -30,6 +30,8 @@ export function TaskList() {
     newTask.title = newTaskTitle;
 
     setTasks([...tasks, newTask]);
+
+    setNewTaskTitle('');
   }
 
   const handleToggleTaskCompletion = (id: number) => {
