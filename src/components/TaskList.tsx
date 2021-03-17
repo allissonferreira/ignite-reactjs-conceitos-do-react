@@ -25,6 +25,9 @@ export function TaskList() {
       alert('Por favor, insira um título.');
       return;
     }
+
+    newTask.id = generateNewId();
+    newTask.title = newTaskTitle;
   }
 
   function handleToggleTaskCompletion(id: number) {
