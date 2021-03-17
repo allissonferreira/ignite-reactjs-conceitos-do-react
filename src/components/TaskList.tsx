@@ -14,7 +14,7 @@ export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
-  function handleCreateNewTask() {
+  const handleCreateNewTask = () => {
     const newTask = {
       id: 0,
       title: '',
@@ -32,17 +32,17 @@ export function TaskList() {
     setTasks([...tasks, newTask]);
   }
 
-  function handleToggleTaskCompletion(id: number) {
+  const handleToggleTaskCompletion = (id: number) => {
     // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
   }
 
-  function handleRemoveTask(id: number) {
+  const handleRemoveTask = (id: number) => {
     // Remova uma task da listagem pelo ID
-  }
+  };
 
-  function generateNewId() {
+  const generateNewId = () => {
     return new Date().getTime();
-  }
+  };
 
   return (
     <section className="task-list container">
@@ -84,7 +84,6 @@ export function TaskList() {
               </button>
             </li>
           ))}
-          
         </ul>
       </main>
     </section>
