@@ -44,6 +44,10 @@ export function TaskList() {
     return new Date().getTime();
   };
 
+  const findTaskIndexById = (id: number) => tasks.findIndex(function(task: Task){
+    return task.id === id;
+  });
+
   return (
     <section className="task-list container">
       <header>
