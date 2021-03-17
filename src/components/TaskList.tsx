@@ -20,6 +20,11 @@ export function TaskList() {
       title: '',
       isComplete: false
     };
+
+    if (newTaskTitle === '') {
+      alert('Por favor, insira um título.');
+      return;
+    }
   }
 
   function handleToggleTaskCompletion(id: number) {
